@@ -29,7 +29,7 @@ def calculer_prochain_etat(grille):
                         continue
                     if grille[(i + k) % grille.shape[0], (j + l) % grille.shape[1]] == '# ':
                         nb_voisins += 1
-            if grille[i, j] == '# ' and (nb_voisins < 2 or nb_voisins > 10):
+            if grille[i, j] == '# ' and (nb_voisins < 2 or nb_voisins > 3):
                 nouvelle_grille[i, j] = '  '
             elif grille[i, j] == '  ' and nb_voisins == 3:
                 nouvelle_grille[i, j] = '# '
