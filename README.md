@@ -23,6 +23,7 @@ Then you can run the project by running the following command in the root direct
 ```
 python ./app/main.py
 ```
+or
 ```
 python3 ./app/main.py
 ```
