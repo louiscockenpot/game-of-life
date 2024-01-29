@@ -4,7 +4,11 @@ This project is a simple implementation of the well known Game of Life by John H
 
 ## Getting Started
 
-To run this project on your machine, you will need to have installed python on your machine. You can download python from [here](https://www.python.org/downloads/). Once you have python installed, you can clone this repository to your machine.
+To run this project on your machine, you will need to have installed python on your machine. You can download python from [here](https://www.python.org/downloads/). Once you have python installed, you can clone this repository to your machine:
+
+```
+git clone https://github.com/louiscockenpot/game-of-life.git
+```
 
 ### Run the project
 
