@@ -30,10 +30,12 @@ python3 ./app/main.py
 
 ## Contributing
 
-To contribute to this project, you can modify the code and create a pull request. If you find any bugs, you can create an issue.
+We welcome contributions to this project. To contribute:
 
-Don't hesitate to check the issue section to find something to work on !
-
+Fork the repository.
+Create a new branch for your feature or bug fix.
+Commit your changes with clear, descriptive messages.
+Create a pull request against the main branch of this repository.
 
 ## Authors
 
