@@ -21,11 +21,11 @@ pip install -r requirements.txt
 Then you can run the project by running the following command in the root directory of the project.
 
 ```
-python ./app/main.py
+sudo python ./app/main.py
 ```
 or
 ```
-python3 ./app/main.py
+sudo python3 ./app/main.py
 ```
 
 ## Contributing
