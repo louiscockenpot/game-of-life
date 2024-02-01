@@ -2,13 +2,12 @@ import threading
 import os
 import numpy as np
 import time
+import keyboard 
 
-# Global variable to control the game state
 game_paused = False
 
 def init_grille(taille):
     return np.random.choice(['  ', '# '], taille * taille, p=[0.8, 0.2]).reshape(taille, taille)
-
 
 def afficher_grille(grille):
     os.system('cls' if os.name == 'nt' else 'clear')
@@ -16,7 +15,7 @@ def afficher_grille(grille):
         for j in range(grille.shape[1]):
             print(grille[i, j], end='')
         print()
-
+    print("\nPress 'p' to pause/resume the evolution")
 
 def calculer_prochain_etat(grille):
     nouvelle_grille = np.copy(grille)
@@ -36,20 +35,19 @@ def calculer_prochain_etat(grille):
 
     return nouvelle_grille
 
-
 def handle_user_input():
     global game_paused
-    while True:
-        input_char = input()
-        if input_char.lower() == 'p':
+    def on_press(event):
+        global game_paused
+        if event.name == 'p':
             game_paused = not game_paused
 
+    keyboard.on_press(on_press)
 
 def jeu_de_la_vie(taille, generations):
     global game_paused
     grille = init_grille(taille)
 
-    # Start the user input thread
     input_thread = threading.Thread(target=handle_user_input)
     input_thread.daemon = True
     input_thread.start()
@@ -62,4 +60,5 @@ def jeu_de_la_vie(taille, generations):
         time.sleep(0.3)
 
 
-jeu_de_la_vie(40, 100)
+if __name__ == '__main__':
+    jeu_de_la_vie(40, 100)
