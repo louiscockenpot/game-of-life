@@ -1,6 +1,7 @@
 # Game of Life
 
 This project is a simple implementation of the well known Game of Life by John Horton Conway. The game is a zero-player game, meaning that its evolution is determined by its initial state, requiring no further input. One interacts with the Game of Life by creating an initial configuration and observing how it evolves.
+You can choose to pause the game and resume it by pressing the key "P".
 
 ## Getting Started
 
